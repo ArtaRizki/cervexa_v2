@@ -1,0 +1,1 @@
+{"idprod":"SPJR","dus":"12","pcs":"0"}{"idprod":"SPJR","dus":"30","pcs":"0"}

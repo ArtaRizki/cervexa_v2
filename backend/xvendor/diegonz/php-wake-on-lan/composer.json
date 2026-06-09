@@ -1,0 +1,56 @@
+{
+    "name": "diegonz/php-wake-on-lan",
+    "description": "Wake on lan target enabled devices by sending magic packets to them from PHP",
+    "keywords": [
+        "lan",
+        "wake",
+        "wakeonlan",
+        "magicpacket"
+    ],
+    "homepage": "https://github.com/diegonz/php-wake-on-lan",
+    "license": "MIT",
+    "type": "library",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Diego González",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1.8",
+        "ext-ctype": "*",
+        "ext-sockets": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Diegonz\\PHPWakeOnLan\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Diegonz\\PHPWakeOnLan\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Diegonz\\PHPWakeOnLan\\PHPWakeOnLanServiceProvider"
+            ],
+            "aliases": {
+                "PHPWakeOnLan": "Diegonz\\PHPWakeOnLan\\Facades\\PHPWakeOnLan"
+            }
+        }
+    }
+}

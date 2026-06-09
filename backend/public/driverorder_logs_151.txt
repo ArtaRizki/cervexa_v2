@@ -1,0 +1,30 @@
+
+151_2025-06-30 11:29:51
+ErrorException: Trying to get property 'expdate' of non-object in C:\laragon\www\apidev\app\Http\Controllers\driverapp\OrderController.php:2030
+Stack trace:
+#0 C:\laragon\www\apidev\app\Http\Controllers\driverapp\OrderController.php(2030): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 2030, Array)
+#1 C:\laragon\www\apidev\vendor\illuminate\container\BoundMethod.php(36): App\Http\Controllers\driverapp\OrderController->syncqr(Object(Laravel\Lumen\Http\Request))
+#2 C:\laragon\www\apidev\vendor\illuminate\container\Util.php(37): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 C:\laragon\www\apidev\vendor\illuminate\container\BoundMethod.php(93): Illuminate\Container\Util::unwrapIfClosure(Object(Closure))
+#4 C:\laragon\www\apidev\vendor\illuminate\container\BoundMethod.php(37): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#5 C:\laragon\www\apidev\vendor\illuminate\container\Container.php(596): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#6 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(386): Illuminate\Container\Container->call(Array, Array)
+#7 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(352): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#8 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(326): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\driverapp\OrderController), 'syncqr', Array)
+#9 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(279): Laravel\Lumen\Application->callControllerAction(Array)
+#10 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(259): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#11 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#12 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(48): call_user_func(Object(Closure), Object(Laravel\Lumen\Http\Request))
+#13 C:\laragon\www\apidev\app\Http\Middleware\Authenticate.php(42): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Laravel\Lumen\Http\Request))
+#14 C:\laragon\www\apidev\vendor\illuminate\pipeline\Pipeline.php(167): App\Http\Middleware\Authenticate->handle(Object(Laravel\Lumen\Http\Request), Object(Closure))
+#15 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Laravel\Lumen\Http\Request))
+#16 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(30): call_user_func(Object(Closure), Object(Laravel\Lumen\Http\Request))
+#17 C:\laragon\www\apidev\vendor\illuminate\pipeline\Pipeline.php(103): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Laravel\Lumen\Http\Request))
+#18 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(423): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(260): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#20 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(166): Laravel\Lumen\Application->handleFoundRoute(Array)
+#21 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(426): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#22 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(172): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#23 C:\laragon\www\apidev\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(109): Laravel\Lumen\Application->dispatch(NULL)
+#24 C:\laragon\www\apidev\public\index.php(28): Laravel\Lumen\Application->run()
+#25 {main}

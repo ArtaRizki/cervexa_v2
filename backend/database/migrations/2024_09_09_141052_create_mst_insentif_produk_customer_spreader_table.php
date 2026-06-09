@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateMstInsentifProdukCustomerSpreaderTable extends Migration
+{
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('mst_insentif_produk_customer_spreader', function (Blueprint $table) {
+      $table->id();
+      $table->date('mulai');
+      $table->string('cabang', 30)->default('');
+      $table->string('kel', 10)->default('');
+      $table->string('jenis', 10)->default('');
+      $table->float('nominal')->default(0);
+      $table->integer('min_persen')->default(0);
+      $table->bigInteger('deleted_id')->default(0);
+      $table->softDeletes();
+      $table->bigInteger('user_id')->default(0);
+      $table->timestamps();
+    });
+  }
+
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('mst_insentif_produk_customer_spreader');
+  }
+}

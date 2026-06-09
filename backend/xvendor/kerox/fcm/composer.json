@@ -1,0 +1,50 @@
+{
+  "name": "kerox/fcm",
+  "type": "library",
+  "description": "A PHP library to send push notification through Firebase Cloud Messaging",
+  "keywords": [
+    "fcm",
+    "push",
+    "notification",
+    "firebase cloud messaging"
+  ],
+  "homepage": "https://github.com/ker0x/fcm",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Romain Monteil",
+      "email": "monteil.romain@gmail.com",
+      "homepage": "https://kerox.fr",
+      "role": "Author"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.5",
+    "phpstan/phpstan": "^0.12",
+    "phpunit/phpunit": "^7.5"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Kerox\\Fcm\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kerox\\Fcm\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "php-cs-fixer": "vendor/bin/php-cs-fixer fix --diff --verbose --config=.php_cs",
+    "phpstan": "vendor/bin/phpstan --level=max --memory-limit=\"-1\" --no-progress analyze",
+    "phpunit": "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml"
+  }
+}
